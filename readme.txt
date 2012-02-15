@@ -42,7 +42,7 @@ That's all !!! I hope you enjoy the plugin.
 = 1.01 = 
 It is a little UI update! I hope you enjoy the widget.
 
-= 1.0 = 
+= 1.01 = 
 It is the first release ! I hope you enjoy the widget.
 
 == Upgrade Notice ==

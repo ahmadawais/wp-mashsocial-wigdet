@@ -50,7 +50,7 @@ No upgrade till yet
 
 == Screenshots ==
 Visit http://freakify.com for screenshots and details
-http://freakify.com/2012/01/wordpress-login-logo-changer-by-ahmad-awais/
+http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 
 == Frequently Asked Questions == 
 How can i install it?

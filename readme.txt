@@ -41,7 +41,7 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
-= 1.01 = 
+= 1.0.1 = 
 It is a little UI update! I hope you enjoy the widget.
 
 = 1.0 = 

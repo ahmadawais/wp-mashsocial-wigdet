@@ -11,10 +11,11 @@ License: GPLv2 or later
 
 
 == Description ==
- WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your G+ , Twitter , Facebook and Feeds Subscription in it .
+ WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your G+ , Twitter , Facebook and Feeds Subscription in it.Now With Google Author SEO.
  
- 1.Upload the  plugin to your blog and just activate it.
-2.Goto your Appearance>Widgets and then modify its data as required.
+1.Upload the  plugin to your blog and just activate it.
+1.Goto your Appearance>Widgets and then modify its data as required.
+NEW Now With Google Author SEO.
 
 That's all !!! I hope you enjoy the plugin.
 
@@ -44,6 +45,7 @@ That's all !!! I hope you enjoy the plugin.
 
 = 1.0.2 = 
 Debuuged 3 syntax validation errors! I hope you enjoy the widget.
+Now With Google Author SEO.
 
 = 1.0.1 = 
 

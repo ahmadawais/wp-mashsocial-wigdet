@@ -6,7 +6,7 @@ Plugin link: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad
 Tags: mashable,mashsocial,social,facebook,google,twitter,g+,email,subscribe,widget,sidebar,color,ahmad awais mashsocial,add, admin, dashboard, logo,custom,logo,easy mashable social bar,easy ,mashable ,social ,bar
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 
 
@@ -41,7 +41,12 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
+
+= 1.0.2 = 
+Debuuged 3 syntax validation errors! I hope you enjoy the widget.
+
 = 1.0.1 = 
+
 It is a little UI update! I hope you enjoy the widget.
 
 = 1.0 = 

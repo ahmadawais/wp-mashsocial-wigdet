@@ -3,7 +3,7 @@
 Plugin Name: WP MashSocial Wigdet
 Plugin URI: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Description: A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your G+ , Twitter , Facebook and Feeds in it.
-Version: 1.0.1
+Version: 1.0.2
 Author: Ahmad Awais
 Author URI: http://freakify.com/
 License: GPLv2
@@ -66,10 +66,10 @@ class mashsocial extends WP_Widget {
 	<div id="email-subscribe" style="background: <?php echo $ecolor_id; ?>;"> 
 		<div class="email-box">
 			<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo $feedbr_id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
-				<input class="email" type="text" style="width: <?php echo $ewidth_id; ?>px; font-size: 12px;" id="email" name="email" value="<?php echo $etext_id; ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">		
-				<input type="hidden" value="<?php echo $feedbr_id; ?>" name="uri">
-				<input type="hidden" name="loc" value="en_US">
-				<input class="subscribe" name="commit" type="submit" value="Subscribe">	
+				<input class="email" type="text" style="width: <?php echo $ewidth_id; ?>px; font-size: 12px;" id="email" name="email" value="<?php echo $etext_id; ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>		
+				<input type="hidden" value="<?php echo $feedbr_id; ?>" name="uri"/>
+				<input type="hidden" name="loc" value="en_US"/>
+				<input class="subscribe" name="commit" type="submit" value="Subscribe"/>	
 			</form>
 		</div>
 	</div>
@@ -83,15 +83,23 @@ class mashsocial extends WP_Widget {
 			<a rel="nofollow external" title="LinkedIn" href="http://my.linkedin.com/in/<?php echo $linkedinn_id; ?>" target="_blank">LinkedIn</a>
 		</li>
 		<li class="my-gplus">
-			<a rel="nofollow" title="Google Plus" rel="author" href="http://plus.google.com/<?php echo $gplus_id; ?>" target="_blank">Google Plus</a>
+			<a title="Google Plus" rel="author" href="http://plus.google.com/<?php echo $gplus_id; ?>" target="_blank">Google Plus</a>
 		</li>
 	</ul>
 </div>
 
-<div id="get-mashsocial" style="background: #EBEBEB;border: 1px solid #CCC;border-top: 1px solid white;padding: 1px 8px 1px 3px;text-align: right;border-image: initial;font-size:10px;font-family: "Arial","Helvetica",sans-serif;">
+<div id="get-mashsocial" style="background: #EBEBEB;border: 1px solid #CCC;border-top: 1px solid white;padding: 1px 8px 1px 3px;text-align: right;border-image: initial;font-size:10px;font-family: Arial,Helvetica,sans-serif;">
       <span class="author-credit" style="font-family: Arial, Helvetica, sans-serif;"><a href="<?php echo $footerurl_id; ?>" target="_blank" title="<?php echo $footertext_id; ?>"><?php echo $footertext_id; ?> »»</a></span></div></div> <!-- End Widget -->
+<<<<<<< .mine
+
+
+
+
+</div
+=======
 
 </div>
+>>>>>>> .r506636
 <!--end of social widget--> 
 
 		<?php

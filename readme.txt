@@ -13,23 +13,18 @@ License: GPLv2 or later
 == Description ==
  WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your G+ , Twitter , Facebook and Feeds Subscription in it .
  
- 1.Upload the  plugin to your blog and just activate it.
+1.Upload the  plugin to your blog and just activate it.
 2.Goto your Appearance>Widgets and then modify its data as required.
 
 That's all !!! I hope you enjoy the plugin.
 
  More Details & Support:
  
- Demo :         http://freakify.com
- 
- Support Thread http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/ .
- 
- Follow My Blog http://freakify.com .
- 
- FB Fan Page    http://facebook.com/freakify .
- 
- Subscribe      http://feedburner.google.com/fb/a/mailverify?uri=freakify .
- 
+ Demo :         http://freakify.com - 
+ Support Thread http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/ .- 
+ Follow My Blog http://freakify.com .- 
+ FB Fan Page    http://facebook.com/freakify .- 
+ Subscribe      http://feedburner.google.com/fb/a/mailverify?uri=freakify .- 
  Twitter        http://twitter.com/mrahmadawais .
  
 == Installation ==
@@ -41,6 +36,30 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
+
+= 1.1.0 = 
+Google Add to circle Options Added.
+Google Author's SEO added.
+Google Publisher's SEO added.
+UI Modified a lot.
+
+= 1.0.9 = 
+A little code error debugged.
+
+= 1.0.8 = 
+A little code error debugged.
+
+= 1.0.7 = 
+A little code error debugged.
+
+= 1.0.6 = 
+A little code error debugged.
+
+= 1.0.5 = 
+A little code error debugged.
+
+= 1.0.4 = 
+A little code error debugged.
 
 = 1.0.3 = 
 A little code error debugged.
@@ -56,7 +75,10 @@ It is a little UI update! I hope you enjoy the widget.
 It is the first release ! I hope you enjoy the widget.
 
 == Upgrade Notice ==
-A little code error debugged.
+Google Add to circle Options Added.
+Google Author's SEO added.
+Google Publisher's SEO added.
+UI Modified a lot.
 
 == Screenshots ==
 Visit http://freakify.com for screenshots 

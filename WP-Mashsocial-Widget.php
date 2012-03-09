@@ -3,7 +3,7 @@
 Plugin Name: WP MashSocial Wigdet
 Plugin URI: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Description: A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your G+ , twitter , Facebook and Feeds in it.
-Version: 1.1.0
+Version: 1.1.1
 Author: Ahmad Awais
 Author URI: http://freakify.com/
 License: GPLv2
@@ -103,7 +103,7 @@ class mashsocial extends WP_Widget {
 			<a rel="nofollow" title="RSS" href="http://feeds.feedburner.com/<?php echo $feedbr_id; ?>" target="_blank">RSS Feed</a>
 		</li>
 		<li class="elinkedins">
-			<a rel="nofollow external" title="LinkedIn" href="http://my.linkedin.com/in/<?php echo $linkedinn_id; ?>" target="_blank">LinkedIn</a>
+			<a rel="nofollow external" title="LinkedIn" href="http://www.linkedin.com/profile/view?id=<?php echo $linkedinn_id; ?>" target="_blank">LinkedIn</a>
 		</li>
 		<li class="my-gplus">
 			<a title="Google Plus" rel="author" href="http://plus.google.com/<?php echo $gplus_id; ?>" target="_blank">Google Plus</a>
@@ -183,7 +183,7 @@ class mashsocial extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('fb_id'); ?>"><?php _e('Enter your Facebook URL:'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('fb_id'); ?>" value="<?php echo $fb_id; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id('linkedinn_id'); ?>"><?php _e('Enter your LinkedIn ID:'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('linkedinn_id'); ?>"><?php _e('Enter your LinkedIn ID:'); ?><a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/#linkedin">?</label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('linkedinn_id'); ?>" value="<?php echo $linkedinn_id; ?>" /></p>
 		<p><label for="<?php echo $this->get_field_id('gplus_id'); ?>"><?php _e('Enter your Google+ ID:'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('gplus_id'); ?>" value="<?php echo $gplus_id; ?>" /></p>

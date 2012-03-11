@@ -183,7 +183,7 @@ class mashsocial extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('fb_id'); ?>"><?php _e('Enter your Facebook URL:'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('fb_id'); ?>" value="<?php echo $fb_id; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id('linkedinn_id'); ?>"><?php _e('Enter your LinkedIn ID:'); ?><a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/#linkedin">?</label>
+		<p><label for="<?php echo $this->get_field_id('linkedinn_id'); ?>"><?php _e('Enter your LinkedIn ID:'); ?><a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/#linkedin">?</a></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('linkedinn_id'); ?>" value="<?php echo $linkedinn_id; ?>" /></p>
 		<p><label for="<?php echo $this->get_field_id('gplus_id'); ?>"><?php _e('Enter your Google+ ID:'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('gplus_id'); ?>" value="<?php echo $gplus_id; ?>" /></p>

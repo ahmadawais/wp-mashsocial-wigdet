@@ -13,7 +13,7 @@ License: GPLv2 or later
 == Description ==
  WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your G+ , Twitter , Facebook and Feeds Subscription in it .
  
- = 1.1.1 = 
+ = 1.1.2 = 
 Google Add to circle Options Added.
 Google Author's SEO added.
 Google Publisher's SEO added.
@@ -27,7 +27,7 @@ That's all !!! I hope you enjoy the plugin.
 
  = More Details & Support: =
  
- 1.Demo :         http://freakify.com - 
+ 1.= Demo :         http://freakify.com  =
  2.Support Thread http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/ .- 
  3.Follow My Blog http://freakify.com .- 
  4.FB Fan Page    http://facebook.com/freakify .- 
@@ -43,6 +43,9 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
+= 1.1.2 = 
+LinkedIn ID instructions.</a> Tag correction.
+
 = 1.1.1 = 
 LinkedIn ID instructions.
 
@@ -85,7 +88,7 @@ It is the first release ! I hope you enjoy the widget.
 
 == Upgrade Notice ==
 
-LinkedIn ID instructions.
+LinkedIn ID instructions.(<a> tag correction)
 Google Add to circle Options Added.
 Google Author's SEO added.
 Google Publisher's SEO added.

@@ -267,6 +267,35 @@ function insert_google_script_in_head() {
 }
 
 add_action( 'wp_head', 'insert_google_script_in_head');
+//my own feeds
+add_action('wp_dashboard_setup', 'my_dashboard_widgets');
+function my_dashboard_widgets() {
+     global $wp_meta_boxes;
+     // remove unnecessary widgets
+     // var_dump( $wp_meta_boxes['dashboard'] ); // use to get all the widget IDs
+     unset(
+          $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'],
+          $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
+          $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
+     );
+     // add a custom dashboard widget
+     wp_add_dashboard_widget( 'dashboard_custom_feed', 'Important News you must read', 'dashboard_custom_feed_output' ); //add new RSS feed output
+}
+function dashboard_custom_feed_output() {
+     echo '<div class="rss-widget">';
+     wp_widget_rss_output(array(
+          'url' => 'http://feeds.feedburner.com/freakify',
+          'title' => 'What\'s up at Freakify',
+          'items' => 10,
+          'show_summary' => 1,
+          'show_author' => 0,
+          'show_date' => 1 
+     ));
+     echo "</div>";
+}
+//end feeds
+
+
 
 
 

@@ -12,14 +12,18 @@ License: GPLv2 or later
 
 == Description ==
  WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your **Pinterest**, G+ , Twitter , Facebook and Feeds Subscription in it .
- 
- = 1.5.0 = 
+Ver = 1.6.0 = 
+
+*Leave IDs Blank to Remove them.
+*Author rel issue removed.
+*Author Credits Check box is added.
+*Google Add to circle Options Added.
+*UI Modified a lot.
 * **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
-* Google Add to circle Options Added.
-* Google Author's SEO added.
-* Google Publisher's SEO added.
-* UI Modified a lot.
-* LinkedIn ID Removed.(On Requests)
+*Google Add to circle Options Added. 
+
+
+
 
 1.Upload the  plugin to your blog and just activate it.
 2.Goto your Appearance>Widgets and then modify its data as required.
@@ -44,6 +48,16 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
+ = 1.6.0 = 
+
+*Leave IDs Blank to Remove them.
+*Author rel issue removed.
+*Author Credits Check box is added.
+*Google Add to circle Options Added.
+*UI Modified a lot.
+* **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
+*Google Add to circle Options Added. 
+
 = 1.5.0 = 
 * Major syntax Changes.
 * Syntax made good.
@@ -99,11 +113,14 @@ It is the first release ! I hope you enjoy the widget.
 
 == Upgrade Notice ==
 
-LinkedIn ID instructions.(<a> tag correction)
-Google Add to circle Options Added.
-Google Author's SEO added.
-Google Publisher's SEO added.
-UI Modified a lot.
+ = 1.6.0 = 
+*Leave IDs Blank to Remove them.
+*Author rel issue removed.
+*Author Credits Check box is added.
+*Google Add to circle Options Added.
+*UI Modified a lot.
+* **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
+*Google Add to circle Options Added. 
 
 == Screenshots ==
 Visit http://freakify.com for screenshots 

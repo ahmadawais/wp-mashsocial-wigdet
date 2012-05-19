@@ -3,10 +3,25 @@
 Plugin Name: WP MashSocial Wigdet
 Plugin URI: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Description: WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your Pinterest, G+ , Twitter , Facebook and Feeds Subscription in it .
-Version: 1.5.0
+Version: 1.6.0
 Author: Ahmad Awais
 Author URI: http://freakify.com/
 License: GPLv2
+*/
+/*  Copyright 2012  Ahmad Awais (email : http://freakify.com/contact-us/)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License, version 2, as
+    published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
  //Registering the function 
  
@@ -51,6 +66,8 @@ class mashsocial extends WP_Widget {
 	    $google_page_id = $instance['google_page_id'];
 		$badge_layout = $instance['badge_layout'];
 		$badge_color = $instance['badge_color'];
+		/*Author Credits*/
+		$authorcredit	= isset($instance['author_credit']) ? $instance['author_credit'] : false ; // give plugin author credit
 		?>
 		
 <!--begin of MashSocial Widget--> 
@@ -59,6 +76,7 @@ class mashsocial extends WP_Widget {
 
 <!-- Link blog to Google+ page -->
 
+<?if ($google_page_id) { ?>
 	<span class="mash-add-to-circle">
 	<?php 	if ( $google_page_id || $badge_layout || $badge_color ) 
 			echo "<a style=\"display: block; height: 0;\" href =\"https://plus.google.com/".$google_page_id."/\"  rel=\"publisher\"></a>";
@@ -66,26 +84,29 @@ class mashsocial extends WP_Widget {
 		
 	?>
 	</span>
-
+<?php }?>
 <!-- FB -->
+<?if ($fb_id) { ?>
 	<div class="mashfb-likebox" style="background: <?php echo $fbboxcolor_id; ?>;"> 
 		<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $fb_id; ?>&amp;send=false&amp;layout=standard&amp;width=<?php echo $fbwidth_id; ?>&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=<?php echo $fbheight_id; ?>&amp;appId=234513819928295" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:<?php echo $fbwidth_id; ?>px; height:<?php echo $fbheight_id; ?>px;"></iframe>
 	</div>
+	<?php }?>
 
 <!-- G+ -->
-
+<?if ($recom_id) { ?>
 	<div class="mashgoogleplus" style="background: <?php echo $gpluscolor_id; ?>;"> 
-		
-
-	
 		<span><?php echo $recom_id; ?></span><div class="g-plusone" data-size="medium"></div>  
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
 	</div>
+	 <?php }?>
 <!-- twitter -->
+<?if ($twtr_id) { ?>
 	<div class="mashtwitter" style="background: <?php echo $twtrcolor_id; ?>;"> 
         	<iframe title="" style="width: 300px; height: 20px;" class="twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.html#_=1319978796351&amp;align=&amp;button=blue&amp;id=twitter_tweet_button_0&amp;lang=en&amp;link_color=&amp;screen_name=<?php echo $twtr_id; ?>&amp;show_count=&amp;show_screen_name=&amp;text_color=" frameborder="0" scrolling="no"></iframe>
 	</div>
+	 <?php }?>
 <!-- Subscribe -->
+<?if ($feedbr_id) { ?>
 	<div id="mash-email-subscribe" style="background: <?php echo $ecolor_id; ?>;"> 
 		<div class="mash-email-box">
 			<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo $feedbr_id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
@@ -96,23 +117,41 @@ class mashsocial extends WP_Widget {
 			</form>
 		</div>
 	</div>
+	 <?php }?>
 <!-- Other Social-->
+<?if ($feedbr_id ||  $pinterest_id || $gplus_id ) { ?>
 <div id="mash-other-social" style="background: <?php echo $othercolor_id; ?>;"> 
 	<ul class="other-follow">
+		<?if ($feedbr_id) { ?>
 		<li class="erss">
 			<a rel="nofollow" title="RSS" href="http://feeds.feedburner.com/<?php echo $feedbr_id; ?>" target="_blank">RSS Feed</a>
 		</li>
+		 <?php }?>
+		 
+		<?if ($pinterest_id) { ?>
 		<li class="elinkedins">
 			<a rel="nofollow external" title="LinkedIn" href="http://pinterest.com/<?php echo $pinterest_id; ?>" target="_blank">Pinterest</a>
 		</li>
+		 <?php }?>
+		 
+		<?if ($gplus_id) { ?>
 		<li class="my-gplus">
-			<a title="Google Plus" rel="author" href="http://plus.google.com/<?php echo $gplus_id; ?>" target="_blank">Google Plus</a>
+			<a title="Google Plus" rel="nofollow external" href="http://plus.google.com/<?php echo $gplus_id; ?>" target="_blank">Google Plus</a>
 		</li>
+		  <?php }?>
 	</ul>
 </div>
-
+<?php }?>
+ <?if ($footertext_id) { ?>
 <div id="get-mashsocial" style="background: #EBEBEB;border: 1px solid #CCC;border-top: 1px solid white;padding: 1px 8px 1px 3px;text-align: right;border-image: initial;font-size:10px;font-family: Arial,Helvetica,sans-serif;">
       <span class="author-credit" style="font-family: Arial, Helvetica, sans-serif;"><a href="<?php echo $footerurl_id; ?>" target="_blank" title="<?php echo $footertext_id; ?>"><?php echo $footertext_id; ?> »»</a></span></div>
+	  <?php }?>
+	  
+	  <?if ($authorcredit) { ?>
+			<p style="font-size:10px;">
+				Get this <a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/" title="WP Mashsocial Widget By Ahmad Awais"> Widget »»</a>
+			</p>
+			<?php }?>
 	  
 	  </div> <!-- End Widget -->
 
@@ -149,11 +188,13 @@ class mashsocial extends WP_Widget {
 		/* No need to strip tags for sex and show_sex. */
 		$instance['badge_layout'] = $new_instance['badge_layout'];
 		$instance['badge_color'] = $new_instance['badge_color'];
+		/*Author Credit*/
+		$instance['author_credit'] = $new_instance['author_credit'];
 		return $instance;
 	}
 
 	function form( $instance ) { 
-		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '270', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '140', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/', 'footertext_id' => 'Get this widget', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '280','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '270', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '140', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://freakify.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '280','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'on') );
 		$feedbr_id = $instance['feedbr_id'];
 		$twtr_id = format_to_edit($instance['twtr_id']);
 		$fb_id = format_to_edit($instance['fb_id']);
@@ -174,6 +215,8 @@ class mashsocial extends WP_Widget {
 		$othercolor_id = format_to_edit($instance['othercolor_id']);
 	?>			
 		<center><strong><u>Social Profiles Setting</u></strong></center><br />
+		<p>If you want to remove any of the Social link just remove, the respective ID below and make it blank, if you want to remove The link in footer Remove its text that says "Subscribe Youtube", If you want to remove recommend on G+ , then remove the phrase "Recomend on G+"</p>
+		<p> For more info, go to <a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/" target="_blank">WP MashSocial Wigdet</a>  page</p>
 		<p><label for="<?php echo $this->get_field_id('feedbr_id'); ?>"><?php _e('Enter your Feedburner ID:'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('feedbr_id'); ?>" name="<?php echo $this->get_field_name('feedbr_id'); ?>" type="text" value="<?php echo $feedbr_id; ?>" /></p>
 		
@@ -249,6 +292,10 @@ class mashsocial extends WP_Widget {
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('ecolor_id'); ?>" value="<?php echo $ecolor_id; ?>" /></p>
 		<p><label for="<?php echo $this->get_field_id('othercolor_id'); ?>"><?php _e('RSS, LinkedIn, Google+: Default: #D8E6EB'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('othercolor_id'); ?>" value="<?php echo $othercolor_id; ?>" /></p>
+		<p>
+			<label for="<?php echo $this->get_field_id('author_credit'); ?>"><?php _e('Give credit to plugin author?'); ?></label>
+			<input type="checkbox" class="checkbox" <?php checked( $instance['author_credit'], 'on' ); ?> id="<?php echo $this->get_field_id('author_credit'); ?>" name="<?php echo $this->get_field_name('author_credit'); ?>" />
+		</p>
 		<p>Support this widget Share it! For more info, go to <a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/" target="_blank">WP MashSocial Wigdet</a>  page</p>
 		<?php }
 }
@@ -274,18 +321,17 @@ function my_dashboard_widgets() {
      // remove unnecessary widgets
      // var_dump( $wp_meta_boxes['dashboard'] ); // use to get all the widget IDs
      unset(
-          $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'],
           $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
           $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
      );
      // add a custom dashboard widget
-     wp_add_dashboard_widget( 'dashboard_custom_feed', 'Important News you must read', 'dashboard_custom_feed_output' ); //add new RSS feed output
+     wp_add_dashboard_widget( 'dashboard_custom_feed', 'Learn More about Blogging', 'dashboard_custom_feed_output' ); //add new RSS feed output
 }
 function dashboard_custom_feed_output() {
      echo '<div class="rss-widget">';
      wp_widget_rss_output(array(
           'url' => 'http://feeds.feedburner.com/freakify',
-          'title' => 'What\'s up at Freakify',
+          'title' => 'Learn More about Blogging',
           'items' => 10,
           'show_summary' => 1,
           'show_author' => 0,
@@ -293,11 +339,19 @@ function dashboard_custom_feed_output() {
      ));
      echo "</div>";
 }
+add_filter('plugin_row_meta',  'Register_Plugins_Links', 10, 2);
+function Register_Plugins_Links ($links, $file) {
+               $base = plugin_basename(__FILE__);
+               if ($file == $base) {
+                       $links[] = '<a target="_blank" href="widgets.php">' . __('Settings') . '</a>';
+                       $links[] = '<a target="_blank" href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/">' . __('FAQ') . '</a>';
+                       $links[] = '<a target="_blank" href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/">' . __('Support') . '</a>';
+					   $links[] = '<a target="_blank" href="http://feedburner.google.com/fb/a/mailverify?uri=freakify">' . __('Subscribe For Free') . '</a>';
+					   $links[] = '<a target="_blank" href="http://freakify.com">' . __('Learn Blogging') . '</a>';
+                       $links[] = '<a target="_blank" href="https://facebook.com/freakify/">' . __('Facebook Page') . '</a>';
+               }
+               return $links;
+       }
 //end feeds
-
-
-
-
-
 add_action('widgets_init', create_function('', 'return register_widget(\'mashsocial\');'));
 add_action('wp_head', array('mashsocial', 'addhead'));

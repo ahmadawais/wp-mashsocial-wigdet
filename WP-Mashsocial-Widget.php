@@ -194,7 +194,7 @@ class mashsocial extends WP_Widget {
 	}
 
 	function form( $instance ) { 
-		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '270', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '140', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://youtube.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '280','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'on') );
+		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '270', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '140', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://youtube.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '280','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'off') );
 		$feedbr_id = $instance['feedbr_id'];
 		$twtr_id = format_to_edit($instance['twtr_id']);
 		$fb_id = format_to_edit($instance['fb_id']);

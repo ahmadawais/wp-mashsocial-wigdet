@@ -76,7 +76,7 @@ class mashsocial extends WP_Widget {
 
 <!-- Link blog to Google+ page -->
 
-<?if ($google_page_id) { ?>
+<?php if ($google_page_id) { ?>
 	<span class="mash-add-to-circle">
 	<?php 	if ( $google_page_id || $badge_layout || $badge_color ) 
 			echo "<a style=\"display: block; height: 0;\" href =\"https://plus.google.com/".$google_page_id."/\"  rel=\"publisher\"></a>";
@@ -86,27 +86,27 @@ class mashsocial extends WP_Widget {
 	</span>
 <?php }?>
 <!-- FB -->
-<?if ($fb_id) { ?>
+<?php if ($fb_id) { ?>
 	<div class="mashfb-likebox" style="background: <?php echo $fbboxcolor_id; ?>;"> 
 		<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $fb_id; ?>&amp;send=false&amp;layout=standard&amp;width=<?php echo $fbwidth_id; ?>&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=<?php echo $fbheight_id; ?>&amp;appId=234513819928295" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:<?php echo $fbwidth_id; ?>px; height:<?php echo $fbheight_id; ?>px;"></iframe>
 	</div>
 	<?php }?>
 
 <!-- G+ -->
-<?if ($recom_id) { ?>
+<?php if ($recom_id) { ?>
 	<div class="mashgoogleplus" style="background: <?php echo $gpluscolor_id; ?>;"> 
 		<span><?php echo $recom_id; ?></span><div class="g-plusone" data-size="medium"></div>  
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
 	</div>
 	 <?php }?>
 <!-- twitter -->
-<?if ($twtr_id) { ?>
+<?php if ($twtr_id) { ?>
 	<div class="mashtwitter" style="background: <?php echo $twtrcolor_id; ?>;"> 
         	<iframe title="" style="width: 300px; height: 20px;" class="twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.html#_=1319978796351&amp;align=&amp;button=blue&amp;id=twitter_tweet_button_0&amp;lang=en&amp;link_color=&amp;screen_name=<?php echo $twtr_id; ?>&amp;show_count=&amp;show_screen_name=&amp;text_color=" frameborder="0" scrolling="no"></iframe>
 	</div>
 	 <?php }?>
 <!-- Subscribe -->
-<?if ($feedbr_id) { ?>
+<?php if ($feedbr_id) { ?>
 	<div id="mash-email-subscribe" style="background: <?php echo $ecolor_id; ?>;"> 
 		<div class="mash-email-box">
 			<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo $feedbr_id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
@@ -119,22 +119,22 @@ class mashsocial extends WP_Widget {
 	</div>
 	 <?php }?>
 <!-- Other Social-->
-<?if ($feedbr_id ||  $pinterest_id || $gplus_id ) { ?>
+<?php if ($feedbr_id ||  $pinterest_id || $gplus_id ) { ?>
 <div id="mash-other-social" style="background: <?php echo $othercolor_id; ?>;"> 
 	<ul class="other-follow">
-		<?if ($feedbr_id) { ?>
+		<?php if ($feedbr_id) { ?>
 		<li class="erss">
 			<a rel="nofollow" title="RSS" href="http://feeds.feedburner.com/<?php echo $feedbr_id; ?>" target="_blank">RSS Feed</a>
 		</li>
 		 <?php }?>
 		 
-		<?if ($pinterest_id) { ?>
+		<?php if ($pinterest_id) { ?>
 		<li class="elinkedins">
-			<a rel="nofollow external" title="LinkedIn" href="http://pinterest.com/<?php echo $pinterest_id; ?>" target="_blank">Pinterest</a>
+			<a rel="nofollow external" title="Piterest" href="http://pinterest.com/<?php echo $pinterest_id; ?>" target="_blank">Pinterest</a>
 		</li>
 		 <?php }?>
 		 
-		<?if ($gplus_id) { ?>
+		<?php if ($gplus_id) { ?>
 		<li class="my-gplus">
 			<a title="Google Plus" rel="nofollow external" href="http://plus.google.com/<?php echo $gplus_id; ?>" target="_blank">Google Plus</a>
 		</li>
@@ -142,17 +142,10 @@ class mashsocial extends WP_Widget {
 	</ul>
 </div>
 <?php }?>
- <?if ($footertext_id) { ?>
+ <?php if ($footertext_id) { ?>
 <div id="get-mashsocial" style="background: #EBEBEB;border: 1px solid #CCC;border-top: 1px solid white;padding: 1px 8px 1px 3px;text-align: right;border-image: initial;font-size:10px;font-family: Arial,Helvetica,sans-serif;">
       <span class="author-credit" style="font-family: Arial, Helvetica, sans-serif;"><a href="<?php echo $footerurl_id; ?>" target="_blank" title="<?php echo $footertext_id; ?>"><?php echo $footertext_id; ?> »»</a></span></div>
 	  <?php }?>
-	  
-	  <?if ($authorcredit) { ?>
-			<p style="font-size:10px;">
-				Get this <a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/" title="WP Mashsocial Widget By Ahmad Awais"> Widget »»</a>
-			</p>
-			<?php }?>
-	  
 	  </div> <!-- End Widget -->
 
 </div>
@@ -194,7 +187,7 @@ class mashsocial extends WP_Widget {
 	}
 
 	function form( $instance ) { 
-		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '270', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '140', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://youtube.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '280','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'off') );
+		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '260', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '120', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://youtube.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '270','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'off') );
 		$feedbr_id = $instance['feedbr_id'];
 		$twtr_id = format_to_edit($instance['twtr_id']);
 		$fb_id = format_to_edit($instance['fb_id']);
@@ -261,7 +254,11 @@ class mashsocial extends WP_Widget {
 <iframe src="//www.facebook.com/plugins/subscribe.php?href=https%3A%2F%2Fwww.facebook.com%2Fahmadawais&amp;layout=button_count&amp;show_faces=false&amp;colorscheme=light&amp;font&amp;width=120&amp;appId=102008056593077" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px;  height:21px;" allowTransparency="true"></iframe>
 <g:plus href="https://plus.google.com/102220710143180184553/" size="smallbadge"></g:plus>
 
-	</p>	
+	</p>
+<p><hr /><br/>
+You can also subscribe to updates of Freakify to obtain news about this plugin.
+<a href="http://feedburner.google.com/fb/a/mailverify?uri=freakify" target="_blank">Subscribe to get Notified</a>
+</p>	
  <!-- Badge G+ -->		
 		<center><strong><u>Advanced Settings</u></strong></center><br />
 		<p><label for="<?php echo $this->get_field_id('widgwidth_id'); ?>"><?php _e('Widget width(px):'); ?></label>
@@ -296,7 +293,11 @@ class mashsocial extends WP_Widget {
 			<label for="<?php echo $this->get_field_id('author_credit'); ?>"><?php _e('Give credit to plugin author?'); ?></label>
 			<input type="checkbox" class="checkbox" <?php checked( $instance['author_credit'], 'on' ); ?> id="<?php echo $this->get_field_id('author_credit'); ?>" name="<?php echo $this->get_field_name('author_credit'); ?>" />
 		</p>
-		<p>Support this widget Share it! For more info, go to <a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/" target="_blank">WP MashSocial Wigdet</a>  page</p>
+		<p>Support this widget Share it! Donate for it.For more info, go to <a href="http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/" target="_blank">WP MashSocial Wigdet</a>  page</p>
+		<p><hr /><br/>
+You can also subscribe to updates of Freakify to obtain news about this plugin.
+<a href="http://feedburner.google.com/fb/a/mailverify?uri=freakify" target="_blank">Subscribe to get Notified</a>
+</p>
 		<?php }
 }
 
@@ -312,18 +313,11 @@ function insert_google_script_in_head() {
 		echo '})();</script>';
 	   
 }
-
 add_action( 'wp_head', 'insert_google_script_in_head');
+
 //my own feeds
 add_action('wp_dashboard_setup', 'my_dashboard_widgets');
 function my_dashboard_widgets() {
-     global $wp_meta_boxes;
-     // remove unnecessary widgets
-     // var_dump( $wp_meta_boxes['dashboard'] ); // use to get all the widget IDs
-     unset(
-          $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
-          $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
-     );
      // add a custom dashboard widget
      wp_add_dashboard_widget( 'dashboard_custom_feed', 'Learn More about Blogging', 'dashboard_custom_feed_output' ); //add new RSS feed output
 }

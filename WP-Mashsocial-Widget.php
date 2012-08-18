@@ -3,7 +3,7 @@
 Plugin Name: WP MashSocial Wigdet
 Plugin URI: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Description: WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your Pinterest, G+ , Twitter , Facebook and Feeds Subscription in it .
-Version: 1.7.0
+Version: 1.8.0
 Author: Ahmad Awais
 Author URI: http://freakify.com/
 License: GPLv2
@@ -78,12 +78,27 @@ class mashsocial extends WP_Widget {
 
 <?php if ($google_page_id) { ?>
 	<span class="mash-add-to-circle">
-	<?php 	if ( $google_page_id || $badge_layout || $badge_color ) 
-			echo "<a style=\"display: block; height: 0;\" href =\"https://plus.google.com/".$google_page_id."/\"  rel=\"publisher\"></a>";
-			echo "<g:plus href=\"https://plus.google.com/".$google_page_id."/\"  width=\"".$widgwidth_id."px;\" size=\"".$badge_layout."\" theme=\"".$badge_color."\"></g:plus>";
+	<?php 	if ( $google_page_id ) {?>
 		
-	?>
+			
+
+			<!-- Place this tag where you want the badge to render. -->
+<g:plus width="<?php echo $widgwidth_id ?>";" size="<?php echo $badge_layout ?>" theme="<?php echo $badge_color ?>"href="//plus.google.com/<?php echo $google_page_id ?>" rel="publisher"></g:plus>
+
+		
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+			
+
+	
 	</span>
+<?php }?>
 <?php }?>
 <!-- FB -->
 <?php if ($fb_id) { ?>
@@ -250,7 +265,7 @@ class mashsocial extends WP_Widget {
 		
 		<p><hr />
 			<label>If you like this plugin, Please contribute your like on facebook:  </label><br />
-<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffreakify.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=295337620523337" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Ffreakify&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=295337620523337" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
 <iframe src="//www.facebook.com/plugins/subscribe.php?href=https%3A%2F%2Fwww.facebook.com%2Fahmadawais&amp;layout=button_count&amp;show_faces=false&amp;colorscheme=light&amp;font&amp;width=120&amp;appId=102008056593077" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px;  height:21px;" allowTransparency="true"></iframe>
 <g:plus href="https://plus.google.com/102220710143180184553/" size="smallbadge"></g:plus>
 

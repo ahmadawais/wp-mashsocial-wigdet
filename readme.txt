@@ -5,24 +5,20 @@ Donate link: http://freakify.com
 Plugin link: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Tags: mashable,mashsocial,social,facebook,google,twitter,g+,email,pinterest,all in one social,subscribe,widget,sidebar,color,ahmad awais mashsocial,add, admin, dashboard, logo,custom,logo,easy mashable social bar,easy ,mashable ,social ,bar
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 1.1.0
+Tested up to: 3.4.1
+Stable tag: 1.8.0
 License: GPLv2 or later
 
 
 == Description ==
  WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your **Pinterest**, G+ , Twitter , Facebook and Feeds Subscription in it .
-Ver = 1.6.0 = 
+Ver = 1.8.0 = 
 
+*Issue with Google Plus Circle resolved (Google API Updated)
+*Asynchronous Loading (To increase Page Speed)
 *Leave IDs Blank to Remove them.
-*Author rel issue removed.
-*Author Credits Check box is added.
-*Google Add to circle Options Added.
-*UI Modified a lot.
-* **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
+*Relation Publisher Updated
 *Google Add to circle Options Added. 
-
-
 
 
 1.Upload the  plugin to your blog and just activate it.
@@ -48,7 +44,15 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
- = 1.6.0 = 
+Ver = 1.8.0 = 
+
+*Issue with Google Plus Circle resolved (Google API Updated)
+*Asynchronous Loading (To increase Page Speed)
+*Leave IDs Blank to Remove them.
+*Relation Publisher Updated
+*Google Add to circle Options Added. 
+
+ = 1.7.0 = 
 
 *Leave IDs Blank to Remove them.
 *Author rel issue removed.
@@ -57,6 +61,9 @@ That's all !!! I hope you enjoy the plugin.
 *UI Modified a lot.
 * **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
 *Google Add to circle Options Added. 
+
+= 1.6.0=
+Major UI changes
 
 = 1.5.0 = 
 * Major syntax Changes.

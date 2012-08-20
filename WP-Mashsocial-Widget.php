@@ -3,7 +3,7 @@
 Plugin Name: WP MashSocial Wigdet
 Plugin URI: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Description: WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your Pinterest, G+ , Twitter , Facebook and Feeds Subscription in it .
-Version: 1.8.0
+Version: 1.8.1
 Author: Ahmad Awais
 Author URI: http://freakify.com/
 License: GPLv2

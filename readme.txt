@@ -6,14 +6,15 @@ Plugin link: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad
 Tags: mashable,mashsocial,social,facebook,google,twitter,g+,email,pinterest,all in one social,subscribe,widget,sidebar,color,ahmad awais mashsocial,add, admin, dashboard, logo,custom,logo,easy mashable social bar,easy ,mashable ,social ,bar
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2 or later
 
 
 == Description ==
  WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your **Pinterest**, G+ , Twitter , Facebook and Feeds Subscription in it .
-Ver = 1.8.0 = 
-
+ 
+Ver = 1.8.1 = 
+*CSS Fixes
 *Issue with Google Plus Circle resolved (Google API Updated)
 *Asynchronous Loading (To increase Page Speed)
 *Leave IDs Blank to Remove them.
@@ -44,6 +45,8 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
+Ver = 1.8.1 =
+*CSS Fixes
 Ver = 1.8.0 = 
 
 *Issue with Google Plus Circle resolved (Google API Updated)

@@ -131,6 +131,8 @@
 	width: 270px;}
 #mash-other-social .other-follow ul {
 	list-style: none outside none; 
+	
+margin: 0px 0px 0px 0px;
 	padding-left: 4px;}
 #mash-other-social .other-follow ul li {
 	font-size: 12px;
@@ -157,20 +159,29 @@
 	display:inline;
 	text-shadow: 1px 1px white;}
 #mash-other-social .other-follow li.erss {
+
+margin: 0px 0px 0px 0px;
 	background: url(images/rss-16x16.png) no-repeat transparent;
 	line-height: 1;
 	padding: 0px 3px 1px 20px;
 	width: 60px;
 	margin-bottom:0px;}
 #mash-other-social .other-follow li.elinkedins {
+
+margin: 0px 0px 0px 2px;
 	background: url(images/pinterest-16.png) no-repeat transparent;
 	line-height: 1;
 	padding: 0px 3px 1px 20px; 
 	width: 60px;
 	margin-bottom:0px;}
 #mash-other-social .other-follow li.my-gplus {
+
+margin: 0px 0px 0px 2px;
 	background: url(images/gplus-16x16.png) no-repeat transparent;
 	line-height: 1;
 	width: 60px;
 	padding: 0px 3px 1px 20px;
 	margin-bottom:0px;}
+.other-follow{
+margin: 0px;
+}

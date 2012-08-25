@@ -3,12 +3,14 @@
 Plugin Name: WP MashSocial Wigdet
 Plugin URI: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Description: WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your Pinterest, G+ , Twitter , Facebook and Feeds Subscription in it .
-Version: 1.8.1
+Version: 1.8.5
 Author: Ahmad Awais
 Author URI: http://freakify.com/
 License: GPLv2
 */
 /*  Copyright 2012  Ahmad Awais (email : http://freakify.com/contact-us/)
+	You need written confirmation by Ahmad Awais before using or modifying
+	the code in any of your project.
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -72,7 +74,7 @@ class mashsocial extends WP_Widget {
 		
 <!--begin of MashSocial Widget--> 
 <div style="margin-bottom:10px;">
-<div id="mashsocial" style="width:<?php echo $widgwidth_id; ?>px;"> <!-- MashSocial  Widget -->
+<div id="mashsocial" style="width:100%; overflow:hidden;"> <!-- MashSocial  Widget -->
 
 <!-- Link blog to Google+ page -->
 
@@ -82,8 +84,8 @@ class mashsocial extends WP_Widget {
 		
 			
 
-			<!-- Place this tag where you want the badge to render. -->
-<g:plus width="<?php echo $widgwidth_id ?>";" size="<?php echo $badge_layout ?>" theme="<?php echo $badge_color ?>"href="//plus.google.com/<?php echo $google_page_id ?>" rel="publisher"></g:plus>
+			<!-- Place this tag where you want the badge to render.width="<?php echo $widgwidth_id ?>;" -->
+<g:plus href="https://plus.google.com/<?php echo $google_page_id ?>/" size="<?php echo $badge_layout ?>" theme="<?php echo $badge_color ?>" rel="publisher"></g:plus>
 
 		
 <!-- Place this tag after the last badge tag. -->
@@ -100,24 +102,26 @@ class mashsocial extends WP_Widget {
 	</span>
 <?php }?>
 <?php }?>
-<!-- FB -->
+<!-- FB width:<?php echo $fbwidth_id; ?>px; height:<?php echo $fbheight_id; ?>px;"-->
 <?php if ($fb_id) { ?>
 	<div class="mashfb-likebox" style="background: <?php echo $fbboxcolor_id; ?>;"> 
-		<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $fb_id; ?>&amp;send=false&amp;layout=standard&amp;width=<?php echo $fbwidth_id; ?>&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=<?php echo $fbheight_id; ?>&amp;appId=234513819928295" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:<?php echo $fbwidth_id; ?>px; height:<?php echo $fbheight_id; ?>px;"></iframe>
+		<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $fb_id; ?>&amp;send=false&amp;layout=standard&amp;width=<?php echo $fbwidth_id; ?>&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=<?php echo $fbheight_id; ?>&amp;appId=234513819928295" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:99%; height:66px;"></iframe>
 	</div>
 	<?php }?>
 
 <!-- G+ -->
 <?php if ($recom_id) { ?>
 	<div class="mashgoogleplus" style="background: <?php echo $gpluscolor_id; ?>;"> 
-		<span><?php echo $recom_id; ?></span><div class="g-plusone" data-size="medium"></div>  
+		<span style="margin: 5px 80px;
+line-height: 1em;"><?php echo $recom_id; ?></span><div class="g-plusone" data-size="medium"></div>  
+
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
 	</div>
 	 <?php }?>
 <!-- twitter -->
 <?php if ($twtr_id) { ?>
 	<div class="mashtwitter" style="background: <?php echo $twtrcolor_id; ?>;"> 
-        	<iframe title="" style="width: 300px; height: 20px;" class="twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.html#_=1319978796351&amp;align=&amp;button=blue&amp;id=twitter_tweet_button_0&amp;lang=en&amp;link_color=&amp;screen_name=<?php echo $twtr_id; ?>&amp;show_count=&amp;show_screen_name=&amp;text_color=" frameborder="0" scrolling="no"></iframe>
+        	<iframe title="" style="width: 99%; height: 20px;" class="twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.html#_=1319978796351&amp;align=&amp;button=blue&amp;id=twitter_tweet_button_0&amp;lang=en&amp;link_color=&amp;screen_name=<?php echo $twtr_id; ?>&amp;show_count=&amp;show_screen_name=&amp;text_color=" frameborder="0" scrolling="no"></iframe>
 	</div>
 	 <?php }?>
 <!-- Subscribe -->
@@ -125,7 +129,7 @@ class mashsocial extends WP_Widget {
 	<div id="mash-email-subscribe" style="background: <?php echo $ecolor_id; ?>;"> 
 		<div class="mash-email-box">
 			<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo $feedbr_id; ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
-				<input class="email" type="text" style="width: <?php echo $ewidth_id; ?>px; font-size: 12px;" id="email" name="email" value="<?php echo $etext_id; ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>		
+				<input class="email" type="text" style="width: 92%; font-size: 12px;" id="email" name="email" value="<?php echo $etext_id; ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>		
 				<input type="hidden" value="<?php echo $feedbr_id; ?>" name="uri"/>
 				<input type="hidden" name="loc" value="en_US"/>
 				<input class="subscribe" name="commit" type="submit" value="Subscribe"/>	
@@ -202,7 +206,7 @@ class mashsocial extends WP_Widget {
 	}
 
 	function form( $instance ) { 
-		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '260', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '120', 'etext_id' => 'Enter your email', 'footerurl_id' => 'http://youtube.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '270','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'off') );
+		$instance = wp_parse_args( (array) $instance, array( 'feedbr_id' => 'freakify', 'twtr_id' => 'freakify', 'fb_id' => 'https://facebook.com/freakify', 'fbwidth_id' => '260', 'fbheight_id' => '80', 'recom_id' => 'Recommend on Google', 'ewidth_id' => '120', 'etext_id' => 'Enter your Email Address...', 'footerurl_id' => 'http://youtube.com/', 'footertext_id' => 'Subscribe Youtube', 'fbboxcolor_id' => '#FFF', 'gpluscolor_id' => '#F5FCFE', 'twtrcolor_id' => '#EEF9FD', 'ecolor_id' => '#E3EDF4', 'othercolor_id' => '#D8E6EB', 'pinterest_id' => 'mrahmadawais', 'gplus_id' => '102220710143180184553', 'widgwidth_id' => '270','google_page_id' => '109270748242866772874', 'badge_layout' => 'standard', 'badge_color' => 'light' ,  'author_credit' => 'off') );
 		$feedbr_id = $instance['feedbr_id'];
 		$twtr_id = format_to_edit($instance['twtr_id']);
 		$fb_id = format_to_edit($instance['fb_id']);
@@ -267,7 +271,14 @@ class mashsocial extends WP_Widget {
 			<label>If you like this plugin, Please contribute your like on facebook:  </label><br />
 <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Ffreakify&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=295337620523337" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
 <iframe src="//www.facebook.com/plugins/subscribe.php?href=https%3A%2F%2Fwww.facebook.com%2Fahmadawais&amp;layout=button_count&amp;show_faces=false&amp;colorscheme=light&amp;font&amp;width=120&amp;appId=102008056593077" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px;  height:21px;" allowTransparency="true"></iframe>
-<g:plus href="https://plus.google.com/102220710143180184553/" size="smallbadge"></g:plus>
+<g:plus href="https://plus.google.com/102220710143180184553/" width"200px" size="smallbadge"></g:plus>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 
 	</p>
 <p><hr /><br/>
@@ -276,17 +287,17 @@ You can also subscribe to updates of Freakify to obtain news about this plugin.
 </p>	
  <!-- Badge G+ -->		
 		<center><strong><u>Advanced Settings</u></strong></center><br />
-		<p><label for="<?php echo $this->get_field_id('widgwidth_id'); ?>"><?php _e('Widget width(px):'); ?></label>
+		<!--<p><label for="<?php echo $this->get_field_id('widgwidth_id'); ?>"><?php _e('Widget width(px):'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('widgwidth_id'); ?>" value="<?php echo $widgwidth_id; ?>" /></p>
 		<p><label for="<?php echo $this->get_field_id('fbwidth_id'); ?>"><?php _e('Facebook width(px):'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('fbwidth_id'); ?>" value="<?php echo $fbwidth_id; ?>" /></p>
 
 		<p><label for="<?php echo $this->get_field_id('fbheight_id'); ?>"><?php _e('Facebook height(px):'); ?></label>
-		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('fbheight_id'); ?>" value="<?php echo $fbheight_id; ?>" /></p>
+		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('fbheight_id'); ?>" value="<?php echo $fbheight_id; ?>" /></p>-->
 		<p><label for="<?php echo $this->get_field_id('recom_id'); ?>"><?php _e('Google recommend text:'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('recom_id'); ?>" value="<?php echo $recom_id; ?>" /></p>
-		<p><label for="<?php echo $this->get_field_id('ewidth_id'); ?>"><?php _e('Subscription box width(px):'); ?></label>
-		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('ewidth_id'); ?>" value="<?php echo $ewidth_id; ?>" /></p>
+		<!--<p><label for="<?php echo $this->get_field_id('ewidth_id'); ?>"><?php _e('Subscription box width(px):'); ?></label>
+		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('ewidth_id'); ?>" value="<?php echo $ewidth_id; ?>" /></p>-->
 		<p><label for="<?php echo $this->get_field_id('etext_id'); ?>"><?php _e('Subscription box text:'); ?></label>
 		<input class="widefat" type="text" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('etext_id'); ?>" value="<?php echo $etext_id; ?>" /></p>
 		<p><label for="<?php echo $this->get_field_id('footertext_id'); ?>"><?php _e('Widget foot anchor text:(Optional)'); ?></label>
@@ -316,20 +327,6 @@ You can also subscribe to updates of Freakify to obtain news about this plugin.
 		<?php }
 }
 
-function insert_google_script_in_head() {
-
-                echo '<script type="text/javascript">';
-		echo '(function()';
-		echo '{var po = document.createElement("script");';
-		echo 'po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";';
-		echo 'var s = document.getElementsByTagName("script")[0];';
-		echo 's.parentNode.insertBefore(po, s);';
-
-		echo '})();</script>';
-	   
-}
-add_action( 'wp_head', 'insert_google_script_in_head');
-
 //my own feeds
 add_action('wp_dashboard_setup', 'my_dashboard_widgets');
 function my_dashboard_widgets() {
@@ -348,6 +345,20 @@ function dashboard_custom_feed_output() {
      ));
      echo "</div>";
 }
+
+function insert_google_script_in_head() {
+
+                echo '<script type="text/javascript">';
+		echo '(function()';
+		echo '{var po = document.createElement("script");';
+		echo 'po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";';
+		echo 'var s = document.getElementsByTagName("script")[0];';
+		echo 's.parentNode.insertBefore(po, s);';
+
+		echo '})();</script>';
+	   
+}
+add_action( 'wp_head', 'insert_google_script_in_head');
 add_filter('plugin_row_meta',  'Register_Plugins_Links', 10, 2);
 function Register_Plugins_Links ($links, $file) {
                $base = plugin_basename(__FILE__);

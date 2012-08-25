@@ -45,33 +45,33 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
-Ver = 1.8.5 = 
-* *Mashsocial is now Responsive*
-*Issue with Google Plus Circle resolved (Google API Updated)
-*Asynchronous Loading (To increase Page Speed)
-*Leave IDs Blank to Remove them.
-*Relation Publisher Updated
-*Google Add to circle Options Added. 
-Ver = 1.8.0 = 
 
-*Issue with Google Plus Circle resolved (Google API Updated)
-*Asynchronous Loading (To increase Page Speed)
-*Leave IDs Blank to Remove them.
-*Relation Publisher Updated
-*Google Add to circle Options Added. 
+= 1.8.5 = 
+* -Mashsocial is now Responsive-.
+* Issue with Google Plus Circle resolved (Google API Updated).
+* Asynchronous Loading (To increase Page Speed).
+* Leave IDs Blank to Remove them.
+* Relation Publisher Updated.
+* Google Add to circle Options Added. 
 
- = 1.7.0 = 
+= 1.8.0 = 
+* Issue with Google Plus Circle resolved (Google API Updated).
+* Asynchronous Loading (To increase Page Speed).
+* Leave IDs Blank to Remove them.
+* Relation Publisher Updated.
+* Google Add to circle Options Added. 
 
-*Leave IDs Blank to Remove them.
-*Author rel issue removed.
-*Author Credits Check box is added.
-*Google Add to circle Options Added.
-*UI Modified a lot.
+= 1.7.0 = 
+* Leave IDs Blank to Remove them.
+* Author rel issue removed.
+* Author Credits Check box is added.
+* Google Add to circle Options Added.
+* UI Modified a lot.
 * **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
-*Google Add to circle Options Added. 
+* Google Add to circle Options Added. 
 
 = 1.6.0=
-Major UI changes
+* Major UI changes.
 
 = 1.5.0 = 
 * Major syntax Changes.

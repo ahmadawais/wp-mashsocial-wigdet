@@ -138,6 +138,7 @@ It is the first release ! I hope you enjoy the widget.
 *Google Add to circle Options Added. 
 
 == Screenshots ==
+Visit Support Thread http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/ 
 Visit http://freakify.com for screenshots 
  More Details & Support:
  

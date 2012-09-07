@@ -5,21 +5,21 @@ Donate link: http://freakify.com
 Plugin link: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Tags: mashable,mashsocial,social,facebook,google,twitter,g+,email,pinterest,all in one social,subscribe,widget,sidebar,color,ahmad awais mashsocial,add, admin, dashboard, logo,custom,logo,easy mashable social bar,easy ,mashable ,social ,bar
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 1.8.5
+Tested up to: 3.4.2
+Stable tag: 1.8.6
 License: GPLv2 or later
 
 
 == Description ==
  WP MashSocial Wigdet : A beautiful widget inspired by Mashable to be used in sidebar, it allows you to add your **Pinterest**, G+ , Twitter , Facebook and Feeds Subscription in it .
  
-= 1.8.5 = 
-* -Mashsocial is now Responsive-.
-* Issue with Google Plus Circle resolved (Google API Updated).
-* Asynchronous Loading (To increase Page Speed).
-* Leave IDs Blank to Remove them.
-* Relation Publisher Updated.
-* Google Add to circle Options Added. 
+Ver = 1.8.5 = 
+*Mashsocial is now Responsive
+*Issue with Google Plus Circle resolved (Google API Updated)
+*Asynchronous Loading (To increase Page Speed)
+*Leave IDs Blank to Remove them.
+*Relation Publisher Updated
+*Google Add to circle Options Added. 
 
 
 1.Upload the  plugin to your blog and just activate it.
@@ -29,7 +29,7 @@ That's all !!! I hope you enjoy the plugin.
 
  = More Details & Support: =
  
-* Demo :        [Demo WordPress & Blogging](http://freakify.com) =
+*  Demo :        [Demo WordPress & Blogging](http://freakify.com) =
 * Support Thread http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/ .- 
 * Follow My Blog [Learn WordPress](http://freakify.com) .- 
 * FB Fan Page    [Facebook Updates](http://facebook.com/freakify) .- 
@@ -45,33 +45,36 @@ That's all !!! I hope you enjoy the plugin.
 
 
 == Changelog ==
+Ver = 1.8.6 = 
+Security Update compatible with WP 3.4.2 More at http://freakify.com
 
-= 1.8.5 = 
-* -Mashsocial is now Responsive-.
-* Issue with Google Plus Circle resolved (Google API Updated).
-* Asynchronous Loading (To increase Page Speed).
-* Leave IDs Blank to Remove them.
-* Relation Publisher Updated.
-* Google Add to circle Options Added. 
+Ver = 1.8.5 = 
+* *Mashsocial is now Responsive*
+*Issue with Google Plus Circle resolved (Google API Updated)
+*Asynchronous Loading (To increase Page Speed)
+*Leave IDs Blank to Remove them.
+*Relation Publisher Updated
+*Google Add to circle Options Added. 
+Ver = 1.8.0 = 
 
-= 1.8.0 = 
-* Issue with Google Plus Circle resolved (Google API Updated).
-* Asynchronous Loading (To increase Page Speed).
-* Leave IDs Blank to Remove them.
-* Relation Publisher Updated.
-* Google Add to circle Options Added. 
+*Issue with Google Plus Circle resolved (Google API Updated)
+*Asynchronous Loading (To increase Page Speed)
+*Leave IDs Blank to Remove them.
+*Relation Publisher Updated
+*Google Add to circle Options Added. 
 
-= 1.7.0 = 
-* Leave IDs Blank to Remove them.
-* Author rel issue removed.
-* Author Credits Check box is added.
-* Google Add to circle Options Added.
-* UI Modified a lot.
+ = 1.7.0 = 
+
+*Leave IDs Blank to Remove them.
+*Author rel issue removed.
+*Author Credits Check box is added.
+*Google Add to circle Options Added.
+*UI Modified a lot.
 * **[Pinterest](http://pinterest.com/mrahmadawais/)** Profile Link and Icon Added 
-* Google Add to circle Options Added. 
+*Google Add to circle Options Added. 
 
 = 1.6.0=
-* Major UI changes.
+Major UI changes
 
 = 1.5.0 = 
 * Major syntax Changes.
@@ -138,7 +141,6 @@ It is the first release ! I hope you enjoy the widget.
 *Google Add to circle Options Added. 
 
 == Screenshots ==
-Visit Support Thread http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/ 
 Visit http://freakify.com for screenshots 
  More Details & Support:
  

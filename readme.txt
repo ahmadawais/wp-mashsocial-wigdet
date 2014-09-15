@@ -1,11 +1,11 @@
 ===  WP MashSocial Wigdet ===
 
-Contributors: Ahmad Awais
+Contributors: mrahmadawais
 Donate link: http://freakify.com
 Plugin link: http://freakify.com/2012/01/wordpress-wp-mashsocial-widget-by-ahmad-awais/
 Tags: mashable,mashsocial,social,facebook,google,twitter,g+,email,pinterest,all in one social,subscribe,widget,sidebar,color,ahmad awais mashsocial,add, admin, dashboard, logo,custom,logo,easy mashable social bar,easy ,mashable ,social ,bar
 Requires at least: 3.0
-Tested up to: 3.4.2
+Tested up to: 4.0
 Stable tag: 1.8.6
 License: GPLv2 or later
 
